@@ -6,6 +6,7 @@ import StatusBadge from '../../components/StatusBadge';
 import Navbar from '../../components/Navbar';
 import formatCurrency from '../../utils/formatCurrency';
 import formatData from '../../utils/formatData';
+import { FaPizzaSlice } from "react-icons/fa";
 
 const VALID_STATUSES = ['Pending', 'Confirmed', 'Preparing', 'Out for Delivery', 'Delivered'];
 const FILTER_OPTIONS = ['all', ...VALID_STATUSES];
@@ -202,7 +203,7 @@ const AdminOrders = () => {
         <div className="bg-white border border-gray-200 rounded-2xl shadow-sm overflow-hidden">
           {loading ? (
             <div className="py-16 text-center">
-              <div className="text-3xl animate-bounce mb-3">🍕</div>
+              <div className="text-3xl animate-bounce mb-3"> <FaPizzaSlice size={14} /></div>
               <p className="text-gray-400 text-sm">Loading orders...</p>
             </div>
           ) : filtered.length === 0 ? (
